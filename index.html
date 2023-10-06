@@ -30,6 +30,11 @@
                         <input type="text" placeholder="Buscar un libro">
                         <input type="submit" value="submit">
                     </form>
+                          <div>
+                        <p>Agregar casilla</p>
+                        <button id="agregarTar">Agregar</button>
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,5 +90,19 @@
     </section>
 </main>
 
+    <script>
+
+    document.getElementById("agregarTar").addEventListener("click", function() {
+
+    // Crea un nuevo div
+    var agregarTarjeta = document.createElement("div");
+    agregarTarjeta.classList.add("documentation-links__single");
+
+    agregarTarjeta.textContent = "Nuevo elemento";
+
+    // Agrega el div al div .main
+    document.getElementById('main').appendChild(agregarTarjeta);
+    });     
+    
 </body>
 </html>
